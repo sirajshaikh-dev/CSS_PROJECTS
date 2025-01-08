@@ -21,10 +21,10 @@
 }
 
 .background{
-    transform: translateZ(-40px) scale(5);
+    transform: translateZ(-20px) scale(4);
 }
 .foreground{
-    transform: translateZ(-20px) scale(3);
+    transform: translateZ(-10px) scale(2);
 }
 .background,.foreground{
     position: absolute;
