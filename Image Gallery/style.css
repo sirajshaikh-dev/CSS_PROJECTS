@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+h1{
+    text-align: center;
+    margin: 20px 0;
+}
+.container{
+    height: auto;
+    max-width: 900px;
+    margin: 0 auto; /* placed in center */
+    padding: 20px;
+}
+ .gallery{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: repeat(5,1fr);
+    gap: 20px;
+    justify-content: space-between;
+ }
+figure{
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* border-radius: 50% 20% / 10% 40%; */
+    overflow: hidden; 
+}
+figure img{
+    width: 100%; /*related to parent: galllery ki 32%width h to iski b ho jayegi*/
+    height: 100%;
+    filter:grayscale(100%);
+    object-fit: cover;
+    box-shadow: 0 0 20px #333;
+}
+figure:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.2s;
+    cursor: pointer;
+}
+figure:hover img{
+    filter: grayscale(0);
+}
+figure figcaption{
+    color: white;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    padding: 25px;
+}
+figure:hover figcaption{
+    opacity: 1;
+}
